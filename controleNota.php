@@ -1,3 +1,7 @@
+<style>
+.aprovado
+.reprovado
+</style>
 <?php
 	if(filter_input(INPUT_GET, "aluno") &&
 		filter_input(INPUT_GET, "ano") &&
@@ -21,6 +25,12 @@
 		echo "<br>N4 = " . $n4;
 		echo "<br>Média= " . $media;
 		echo "</fieldset>";
+	if($media>=6) {
+		echo "<p class=aprovado>Parebens" .$aluno . ", Você foi aprovado com média= " . $media . "</p>";
+		}
+	else {
+	   echo "<p class=reprovado>Puxa vida" .$aluno . ", Você foi reprovado com média= " . $media . "</p>";
+	}
 		
 	}else{
 		echo "Campos não preenchidos!!!"; 
