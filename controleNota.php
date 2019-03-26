@@ -1,6 +1,12 @@
 <style>
-.aprovado
-.reprovado
+.aprovado{
+     background-color: green;
+     border: 1px solid green;
+}
+.reprovado{
+     background-color: red;
+     border: 1px solid red;
+}
 </style>
 <?php
 	if(filter_input(INPUT_GET, "aluno") &&
